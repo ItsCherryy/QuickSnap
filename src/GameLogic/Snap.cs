@@ -145,11 +145,12 @@ namespace CardGames.GameLogic
 			{
 				_score[player]++;
 				//TODO: consider playing a sound here...
+				SwinGame.LoadSoundEffectNamed ("Whop", "Whop.mp3");
+				SwinGame.PlaySoundEffect ("Whop");
 
 			}
 			else if (player >= 0 && player < _score.Length) {
 				_score [player]--;
-				System.Media.SoundPlayer player1 = new System.Media.SoundPlayer (@"Resources\sounds\error.wav");
 			}
 
 			// stop the game...
